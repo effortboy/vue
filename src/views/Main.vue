@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-01-19 16:02:26
  * @LastEditors: Seven
- * @LastEditTime: 2021-01-28 13:58:53
+ * @LastEditTime: 2021-02-20 13:41:42
 -->
 <!--
  * @Description: 
@@ -36,7 +36,7 @@
 export default {
     data(){
       return {
-        name:"内容",
+        name:"分类",
         active: 0,
         items: [{ text: '分组 1' }, { text: '分组 2' }]
       }

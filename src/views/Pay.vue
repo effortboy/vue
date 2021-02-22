@@ -42,7 +42,7 @@
 export default {
     data(){
       return {
-        name:"内容",
+        name:"购物车",
       }
     }
 }

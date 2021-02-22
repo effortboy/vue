@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-02-19 14:54:39
  * @LastEditors: Seven
- * @LastEditTime: 2021-02-19 17:21:54
+ * @LastEditTime: 2021-02-20 11:58:31
 -->
 <!--
  * @Description: 
@@ -39,7 +39,7 @@
         </div>
     </div>
     <div class="Mend">
-        <div v-for="(item) in list1" :key="item.key">
+        <div v-for="(item,i) in list1" :key="item.key" @click="getbackgroud(i)" :class="[index == i ? bkClass:'']">
             <div>
                 <div class="Mleft">
                     <img src="../assets/1.jpg" alt="">
@@ -60,8 +60,15 @@ export default {
       return {
         name:"个人中心",
         list:['代发货','待收货','待评价','全部订单'],
-        list1:['我的收藏','地址管理','尺码对照表','帮助中心','意见反馈','关于我们']
+        list1:['我的收藏','地址管理','尺码对照表','帮助中心','意见反馈','关于我们'],
+        index:-1,
+        bkClass:'bk'
       }
+    },
+    methods:{
+        getbackgroud:function(i){
+            this.index = i;
+        }
     }
 }
 </script>
@@ -154,8 +161,10 @@ export default {
 .Mend>div{
     width: 100%;
     height: 3.5rem;
-    /* background: white; */
     border-bottom: 0.1rem solid #F4F4F4;
+}
+.bk{
+    background: #F6F6F6;
 }
 .Mend>div>div{
     width: 90%;
